@@ -14,7 +14,11 @@
         var app = module('simple-directives', []); // sad je napravljen custom module koji nema dependecije drugih modula
         app.directive('nekaDirektiva', function() {
             return {
-                restrict: 'E', // E je za html Element, može i A za atribut html elementu. Postoje još C, EA, itd. Njihovo značenje treba pronaći na netu.
+                restrict: 'E', // E je za html Element, može i A za atribut html elementu. Postoje još C, EA, itd.
+                               // (Attribute) A =  <div Doc></div>
+                               // (Class) C =  <div class="Doc"></div>
+                               // (Element) E =  <Doc data="book_data"></Doc>
+                               // (coMment) M =  <!--directive:Doc -->
                                // Drugim riječima, kažeš ovoj direktivi kako se mora ponašat unutar html-a stranice, odnosno kako će ih angular interpretirat.
                 templateUrl: 'neki-page.html', // template se u ovom slučaju nalazi u istom folderu di je neki.js pa ne treba kopat po hijerarhiji
                 controller: function() {
